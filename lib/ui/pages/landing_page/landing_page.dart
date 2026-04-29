@@ -34,6 +34,13 @@ class _LandingPageState extends ConsumerState<LandingPage> {
   late ProjectDatabase database;
   late IFileService fileService;
   late IImageService imageService;
+  late Future<List<Project>> _projects;
+
+  @override
+  void initState(){
+    super.initState();
+    _projects = _getProjects();
+  }
 
   Future<List<Project>> _getProjects() async {
     return database.projectDAO.getProjects();
@@ -101,7 +108,7 @@ class _LandingPageState extends ConsumerState<LandingPage> {
         actions: const [MainOverflowMenu()],
       ),
       body: FutureBuilder(
-        future: _getProjects(),
+        future: _projects,
         builder: (BuildContext context, AsyncSnapshot<List<Project>> snapshot) {
           if (snapshot.connectionState == ConnectionState.done &&
               snapshot.hasData) {
