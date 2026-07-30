@@ -82,6 +82,8 @@ void main() {
         radius: radius.toInt(),
       );
 
+      print((CanvasPosition.left.toString() + ' '.toString() +  CanvasPosition.top.toString()));
+
       expect(color, isNot(Colors.transparent));
     });
   }
@@ -112,6 +114,8 @@ void main() {
         CanvasPosition.bottom,
         radius: radius.toInt(),
       );
+
+      print((CanvasPosition.right.toString() + ''.toString() +  CanvasPosition.bottom.toString()));
 
       expect(color, isNot(Colors.transparent));
     });

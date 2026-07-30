@@ -72,6 +72,7 @@ class SprayTool extends Tool {
   }
 
   List<Offset> _generateSprayPoints(Offset center) {
+    print(center);
     List<Offset> points = [];
     final density = sprayRadius / 3;
     for (int i = 0; i < density; i++) {
