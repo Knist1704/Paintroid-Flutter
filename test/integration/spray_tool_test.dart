@@ -63,7 +63,7 @@ void main() {
       await UIInteraction.createNewImage();
       await UIInteraction.selectTool(ToolData.SPRAY.name);
 
-      const radius = 10.0;
+      const radius = 50.0;
 
       (UIInteraction.getCurrentTool() as SprayTool).updateSprayRadius(radius);
 
@@ -95,7 +95,7 @@ void main() {
       await UIInteraction.createNewImage();
       await UIInteraction.selectTool(ToolData.SPRAY.name);
 
-      const radius = 10.0;
+      const radius = 50.0;
 
       (UIInteraction.getCurrentTool() as SprayTool).updateSprayRadius(radius);
 
