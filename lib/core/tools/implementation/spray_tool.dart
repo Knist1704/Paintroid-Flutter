@@ -80,7 +80,9 @@ class SprayTool extends Tool {
       final radius = sqrt(random.nextDouble()) * sprayRadius * 2;
       final dx = center.dx + radius * cos(angle);
       final dy = center.dy + radius * sin(angle);
-      points.add(Offset(dx, dy));
+      Offset point = Offset(dx, dy);
+      print(point);
+      points.add(point);
     }
     return points;
   }

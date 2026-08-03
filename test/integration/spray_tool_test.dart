@@ -74,6 +74,7 @@ void main() {
       );
       expect(color, Colors.transparent);
 
+      print((CanvasPosition.left.toString() + ' '.toString() +  CanvasPosition.top.toString()));
       await UIInteraction.tapAt(CanvasPosition.topLeft);
 
       color = await UIInteraction.getPixelColor(
@@ -81,8 +82,6 @@ void main() {
         CanvasPosition.top,
         radius: radius.toInt(),
       );
-
-      print((CanvasPosition.left.toString() + ' '.toString() +  CanvasPosition.top.toString()));
 
       expect(color, isNot(Colors.transparent));
     });
@@ -107,6 +106,7 @@ void main() {
       );
       expect(color, Colors.transparent);
 
+      print((CanvasPosition.right.toString() + ' '.toString() +  CanvasPosition.bottom.toString()));
       await UIInteraction.tapAt(CanvasPosition.bottomRight);
 
       color = await UIInteraction.getPixelColor(
@@ -114,8 +114,6 @@ void main() {
         CanvasPosition.bottom,
         radius: radius.toInt(),
       );
-
-      print((CanvasPosition.right.toString() + ''.toString() +  CanvasPosition.bottom.toString()));
 
       expect(color, isNot(Colors.transparent));
     });
