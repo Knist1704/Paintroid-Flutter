@@ -74,7 +74,6 @@ void main() {
       );
       expect(color, Colors.transparent);
 
-      print((CanvasPosition.left.toString() + ' '.toString() +  CanvasPosition.top.toString()));
       await UIInteraction.tapAt(CanvasPosition.topLeft);
 
       color = await UIInteraction.getPixelColor(
@@ -106,7 +105,6 @@ void main() {
       );
       expect(color, Colors.transparent);
 
-      print((CanvasPosition.right.toString() + ' '.toString() +  CanvasPosition.bottom.toString()));
       await UIInteraction.tapAt(CanvasPosition.bottomRight);
 
       color = await UIInteraction.getPixelColor(
